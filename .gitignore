@@ -55,3 +55,12 @@ docs/_build/
 
 # PyBuilder
 target/
+
+#web2py
+cache
+databases
+errors
+sessions
+uploads/
+languages/
+
