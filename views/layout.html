@@ -32,10 +32,20 @@
           <li><a href="#">Perguntas Frequentes</a></li>
           <li><a href="#">Contato</a></li>
         </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          {{if auth.is_logged_in() :}}
+            <li><a href="{{= URL(c='default', f='user', args='profile')}}"> Logado como {{=auth.user.first_name}}</a></li>
+            <li><a href="{{= URL(c='default', f='user', args='logout')}}">Logout</a> </li>
+          {{else:}}
+            <li><a href="{{= URL(c='default', f='user', args='login')}}">Login</a> </li>
+            {{pass}}
+
+        </ul>
       </nav>
     </div>
   </header>
-    <div class="flash alert alert-dismissable">{{=response.flash or ''}}</div>
+    <div class="alert alert-success">{{=response.flash or ''}}</div>
 
   <div class="container pautai-body">
 
@@ -45,7 +55,7 @@
         <div class="row search">
           <div class="col-md-8">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Filtrar por...">
+              <input type="text" class="form-control" placeholder="Pesquisar por...">
               <span class="input-group-btn">
                 <button class="btn btn-default" type="button"><i class="icon-search"></i></button>
               </span>

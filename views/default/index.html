@@ -48,7 +48,7 @@
                     <p>
                       {{=limita_texto(l.conteudo, 250)}}
                     </p>
-                    <p class="lead">
+                    <p class="ver-mais">
                       <a class="btn btn-default" href="{{=URL(c='default', f='ver_pauta', args=l.id)}}">
                         Ver mais
                       </a>
@@ -61,7 +61,7 @@
                     {{if l.tags:}}
                       {{tags = l.tags.split(',')}}
                       {{for tag in tags:}}
-                        <div class="label label-default">
+                        <div class="{{=tag}} label label-default">
                           <a href="{{=URL(c='default', f='index', vars={'lista':'tags', 'tag':tag})}}">
                             {{=tag}}
                           </a>
