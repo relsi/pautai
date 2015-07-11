@@ -45,8 +45,9 @@
       </nav>
     </div>
   </header>
+  {{if response.flash:}}
     <div class="alert alert-success">{{=response.flash or ''}}</div>
-
+  {{pass}}
   <div class="container pautai-body">
 
     {{if request.url == URL(c='default', f='index'):}}

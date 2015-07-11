@@ -30,7 +30,7 @@ def webservice():
     
     lista = db(db.pauta.id > 0).select(orderby=~db.pauta.votos)
 
-    return locals()
+    return dict(lista=lista)
 
 #formulario de sugestão de pautas.
 #requer usuário logado
