@@ -26,6 +26,12 @@ def index():
 
     return locals()
 
+def webservice():
+    
+    lista = db(db.pauta.id > 0).select(orderby=~db.pauta.votos)
+
+    return locals()
+
 #formulario de sugestão de pautas.
 #requer usuário logado
 @auth.requires_login()
