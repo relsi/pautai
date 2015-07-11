@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<meta charset="utf-8">
-		<title>A Pauta é Nossa</title>
-		<meta name="generator" content="Bootply" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-		<!--[if lt IE 9]>
-			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<link href="css/styles.css" rel="stylesheet">
-	</head>
-	<body>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Pauta Aí!</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
     <header class="navbar navbar-default navbar-fixed-top" role="banner">
       <div class="container">
         <div class="navbar-header">
@@ -23,39 +23,73 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="/" class="navbar-brand">Home</a>
+          <img src="images/megaphone3.png" class="pull-left logo" height="32" width="32">
+          <a href="/" class="navbar-brand">Pauta Aí!</a>
       </div>
       <nav class="collapse navbar-collapse" role="navigation">
         <ul class="nav navbar-nav">
-          <li>
-            <a href="#">Como funciona</a>
-          </li>
+          <li><a href="#">Como funciona?</a></li>
+          <li><a href="#">Perguntas Frequentes</a></li>
+          <li><a href="#">Contato</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <div class="container">
+  <div class="container pautai-body">
+
+      <div class="filtering">
+
+        <div class="row search">
+          <div class="col-md-8">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Filtrar por...">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><i class="icon-search"></i></button>
+              </span>
+            </div><!-- /input-group -->
+          </div><!-- /.col-lg-6 -->
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-8 categories">
+            <div class="badge"><i class="icon icon-plus"></i>Mais votadas</div>
+            <div class="badge"><i class="icon icon-calendar"></i>Mais novas</div>
+            <div class="badge"><i class="icon icon-comment"></i>Mais comentadas</div>
+            <div class="badge"><i class="icon icon-star"></i>Minhas pautas</div>
+          </div>
+
+          <div class="badge criar-nova col-md-3"><i class="icon icon-plus"></i> Sugestão</div>
+
+        </div>
+      </div>
+
     <div class="row">
-      <div class="col-md-12"> 
+      <div class="col-md-8">
+
         <div class="panel">
           <div class="panel-body">
             <!--/sugestões-->
-            <div class="row">    
-              <br>
+            <div class="row suggestion">
+
+              <div class="division tecnologia"></div>
+
               <div class="col-md-2 col-sm-3 text-center">
-                <div class="well">
+                <div class="well votos-well">
+
                   <p>
                     <strong class="votos">123</strong>
-                    <br>
                     <span>votos</span>
                   </p>
+
                 </div>
                 <p>
-                  <button class="btn btn-lg btn-primary">votar</button>
+                  <button class="btn btn-lg btn-votar">Votar <i class="icon-arrow-up"></i></button>
                 </p>
+
               </div>
-              <div class="col-md-10 col-sm-9">
+              <div class="col-md-10 col-sm-9 suggestion-description pull-right">
                 <h3>Título da Sugestão</h3>
                 <div class="row">
                   <div class="col-xs-9">
@@ -64,36 +98,43 @@
                     </p>
                     <p class="lead">
                       <button class="btn btn-default">Ver mais</button>
+                      <a href="#" class="open-comments pull-right"><i class="icon icon-comment"></i>Comente! (10 comentários)</a>
                     </p>
+
+                    <p class="tags">
+                      <div class="label label-default tecnologia">Tecnologia</div>
+                      <div class="label label-default esportes">Esportes</div>
+                      <div class="label label-default educacao">Educação</div>
+                      <div class="label label-default cultura">Cultura</div>
+                      <div class="label label-default cidadania">Cidadania</div>
+                    </p>
+
                     <p class="pull-right">
                     <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweetar</a>
-                      
-                      <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
-                  <!--<strong>Tags:</strong>
-                      <span class="label label-default">keyword</span> 
-                      <span class="label label-default">tag</span> 
-                      <span class="label label-default">post</span> -->
+                    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
                     </p>
                   </div>
                 </div>
-                <br>
-                <br>
               </div>
             </div>
             <hr>
-            <div class="row">    
-              <br>
+            <div class="row suggestion">
+
+              <div class="division educacao"></div>
+
               <div class="col-md-2 col-sm-3 text-center">
-                <div class="well">
+                <div class="well votos-well">
+
                   <p>
                     <strong class="votos">123</strong>
-                    <br>
                     <span>votos</span>
                   </p>
+
                 </div>
                 <p>
-                  <button class="btn btn-lg btn-primary">votar</button>
+                  <button class="btn btn-lg btn-votar">Votar <i class="icon-arrow-up"></i></button>
                 </p>
+
               </div>
               <div class="col-md-10 col-sm-9">
                 <h3>Título da Sugestão</h3>
@@ -104,36 +145,42 @@
                     </p>
                     <p class="lead">
                       <button class="btn btn-default">Ver mais</button>
+                      <a href="#" class="open-comments pull-right"><i class="icon icon-comment"></i>Comente! (10 comentários)</a>
                     </p>
+
+                    <p class="tags">
+                      <div class="label label-default tecnologia">Tecnologia</div>
+                      <div class="label label-default esportes">Esportes</div>
+                      <div class="label label-default educacao">Educação</div>
+                      <div class="label label-default cultura">Cultura</div>
+                      <div class="label label-default cidadania">Cidadania</div>
+                    </p>
+
                     <p class="pull-right">
                     <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweetar</a>
-                      
-                      <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
-                  <!--<strong>Tags:</strong>
-                      <span class="label label-default">keyword</span> 
-                      <span class="label label-default">tag</span> 
-                      <span class="label label-default">post</span> -->
+                    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
                     </p>
                   </div>
                 </div>
-                <br>
-                <br>
               </div>
             </div>
             <hr>
-            <div class="row">    
-              <br>
+            <div class="row suggestion">
+              <div class="division esportes"></div>
               <div class="col-md-2 col-sm-3 text-center">
-                <div class="well">
+
+                <div class="well votos-well">
+
                   <p>
                     <strong class="votos">123</strong>
-                    <br>
                     <span>votos</span>
                   </p>
+
                 </div>
                 <p>
-                  <button class="btn btn-lg btn-primary">votar</button>
+                  <button class="btn btn-lg btn-votar">Votar <i class="icon-arrow-up"></i></button>
                 </p>
+
               </div>
               <div class="col-md-10 col-sm-9">
                 <h3>Título da Sugestão</h3>
@@ -144,36 +191,42 @@
                     </p>
                     <p class="lead">
                       <button class="btn btn-default">Ver mais</button>
+                      <a href="#" class="open-comments pull-right"><i class="icon icon-comment"></i>Comente! (10 comentários)</a>
                     </p>
+
+                    <p class="tags">
+                      <div class="label label-default tecnologia">Tecnologia</div>
+                      <div class="label label-default esportes">Esportes</div>
+                      <div class="label label-default educacao">Educação</div>
+                      <div class="label label-default cultura">Cultura</div>
+                      <div class="label label-default cidadania">Cidadania</div>
+                    </p>
+
                     <p class="pull-right">
                     <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweetar</a>
-                      
-                      <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
-                  <!--<strong>Tags:</strong>
-                      <span class="label label-default">keyword</span> 
-                      <span class="label label-default">tag</span> 
-                      <span class="label label-default">post</span> -->
+                    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
                     </p>
                   </div>
                 </div>
-                <br>
-                <br>
               </div>
             </div>
             <hr>
-            <div class="row">    
-              <br>
+            <div class="row suggestion">
+              <div class="division cidadania"></div>
               <div class="col-md-2 col-sm-3 text-center">
-                <div class="well">
+
+                <div class="well votos-well">
+
                   <p>
                     <strong class="votos">123</strong>
-                    <br>
                     <span>votos</span>
                   </p>
+
                 </div>
                 <p>
-                  <button class="btn btn-lg btn-primary">votar</button>
+                  <button class="btn btn-lg btn-votar">Votar <i class="icon-arrow-up"></i></button>
                 </p>
+
               </div>
               <div class="col-md-10 col-sm-9">
                 <h3>Título da Sugestão</h3>
@@ -184,36 +237,42 @@
                     </p>
                     <p class="lead">
                       <button class="btn btn-default">Ver mais</button>
+                      <a href="#" class="open-comments pull-right"><i class="icon icon-comment"></i>Comente! (10 comentários)</a>
                     </p>
+
+                    <p class="tags">
+                      <div class="label label-default tecnologia">Tecnologia</div>
+                      <div class="label label-default esportes">Esportes</div>
+                      <div class="label label-default educacao">Educação</div>
+                      <div class="label label-default cultura">Cultura</div>
+                      <div class="label label-default cidadania">Cidadania</div>
+                    </p>
+
                     <p class="pull-right">
                     <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweetar</a>
-                      
-                      <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
-                  <!--<strong>Tags:</strong>
-                      <span class="label label-default">keyword</span> 
-                      <span class="label label-default">tag</span> 
-                      <span class="label label-default">post</span> -->
+                    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
                     </p>
                   </div>
                 </div>
-                <br>
-                <br>
               </div>
             </div>
             <hr>
-            <div class="row">    
-              <br>
+            <div class="row suggestion">
+              <div class="division cultura"></div>
+
               <div class="col-md-2 col-sm-3 text-center">
-                <div class="well">
+                <div class="well votos-well">
+
                   <p>
                     <strong class="votos">123</strong>
-                    <br>
                     <span>votos</span>
                   </p>
+
                 </div>
                 <p>
-                  <button class="btn btn-lg btn-primary">votar</button>
+                  <button class="btn btn-lg btn-votar">Votar <i class="icon-arrow-up"></i></button>
                 </p>
+
               </div>
               <div class="col-md-10 col-sm-9">
                 <h3>Título da Sugestão</h3>
@@ -224,30 +283,49 @@
                     </p>
                     <p class="lead">
                       <button class="btn btn-default">Ver mais</button>
+                      <a href="#" class="open-comments pull-right"><i class="icon icon-comment"></i>Comente! (10 comentários)</a>
                     </p>
+
+                    <p class="tags">
+                      <div class="label label-default tecnologia">Tecnologia</div>
+                      <div class="label label-default esportes">Esportes</div>
+                      <div class="label label-default educacao">Educação</div>
+                      <div class="label label-default cultura">Cultura</div>
+                      <div class="label label-default cidadania">Cidadania</div>
+                    </p>
+
                     <p class="pull-right">
                     <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweetar</a>
-                      
-                      <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
-                  <!--<strong>Tags:</strong>
-                      <span class="label label-default">keyword</span> 
-                      <span class="label label-default">tag</span> 
-                      <span class="label label-default">post</span> -->
+                    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
                     </p>
                   </div>
                 </div>
-                <br>
-                <br>
               </div>
             </div>
-            <hr>                                    
+            <hr>
             <!--/sugestões-->
-            <a href="/" class="btn btn-primary pull-right btnNext">
+            <a href="/" class="btn btn-more pull-right btnNext">
               Carregar Mais
             </a>
           </div>
         </div>
       </div><!--/col-12-->
+
+      <div class="panel panel-primary col-md-4 channels">
+        <div class="panel-body">
+        <div class="label tv-brasil-badge"><i class="pull-left icon-facetime-video"> </i>TV Brasil</div>
+
+        <div class="label radio-badge"><i class="pull-left icon-microphone"> </i>Nacional FM Brasília</div>
+        <div class="label radio-badge"><i class="pull-left icon-microphone"> </i>Nacional Rio AM</div>
+        <div class="label radio-badge"><i class="pull-left icon-microphone"> </i>Nacional Alto Solimões</div>
+        <div class="label radio-badge"><i class="pull-left icon-microphone"> </i>Nacional Brasília AM</div>
+        <div class="label radio-badge"><i class="pull-left icon-microphone"> </i>Nacional Amazônia</div>
+        <div class="label radio-badge"><i class="pull-left icon-microphone"> </i>MEC FM - Rio</div>
+        <div class="label radio-badge"><i class="pull-left icon-microphone"> </i>MEC AM - Rio</div>
+        </div>
+
+      </div>
+
     </div>
   </div>
 

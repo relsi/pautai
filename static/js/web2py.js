@@ -733,3 +733,7 @@ web2py_trap_link = jQuery.web2py.trap_link;
 web2py_calc_entropy = jQuery.web2py.calc_entropy;
 */
 /* compatibility code - end*/
+
+setTimeout(function() {
+  $('.alert').fadeOut('fast');
+}, 2000)

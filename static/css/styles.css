@@ -7,6 +7,11 @@ img.logo {
   width:auto;
 }
 
+.alert {
+  margin-top: -2em;
+  text-align: center;
+}
+
 body {
   padding-top:80px;
 }
@@ -45,6 +50,15 @@ footer {
 /* tags */
 .tags {
   font-size: 120%;
+}
+
+.label.label-default {
+  margin-right: 1em;
+
+}
+
+.label.label-default a {
+  color: #eee;
 }
 
 .tecnologia {
