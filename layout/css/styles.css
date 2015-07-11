@@ -1,18 +1,127 @@
+img.logo {
+  margin-top: 0.5em;
+  margin-right: 0.8em;
+}
+
 .navbar-form input, .form-inline input {
   width:auto;
 }
 
 body {
-  padding-top:50px;
+  padding-top:80px;
 }
 
 footer {
   margin-top:40px;
   padding-top:40px;
   padding-bottom:40px;
-  background-color:#ededed;
+  background-color:#000;
+  color: #ededed;
 }
 
+.channels {
+}
+
+.channels .panel-heading {
+  padding: 20px 0px;
+  background: #0C87D7 none repeat scroll 0% 0%;
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 14px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.channels .panel-body {
+  padding: 20px;
+}
+
+.open-comments i {
+  margin-right: 0.3em;
+}
+
+/* tags */
+.tags {
+  font-size: 120%;
+}
+
+.tecnologia {
+  background-color: #724090;
+}
+
+.esportes {
+  background-color: #b6cb3c;
+}
+
+.educacao {
+  background-color: #e0a732;
+}
+
+.cultura {
+  background-color: #d63e7f;
+}
+
+.cidadania {
+  background-color: #26ae9d;
+}
+
+.panel.channels {
+
+}
+
+.filtering {
+  padding-left: 1em;
+}
+
+.search {
+}
+
+.categories {
+  margin-top: 0.5em;
+}
+
+.categories i {
+  margin-right: 0.5em;
+}
+
+.categories .badge {
+  background-color: #eee;
+  color: #0C88D8;
+  font-weight: normal;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  border-radius: 0.2em;
+}
+
+.channels .panel-heading {
+  background-color: #0C88D8;
+}
+
+.tv-brasil-badge {
+  background-color: #769e27;
+  display: block;
+  margin-top: 1em;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  margin-bottom: 1em;
+  font-size: 160%;
+}
+
+.radio-badge {
+  background-color: #769e27;
+  display: block;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  margin-bottom: 1em;
+  font-size: 160%;
+}
+
+.btn-more {
+  background-color: #724090;
+  color: #fff;
+}
 
 #masthead {
   min-height:199px;
@@ -27,6 +136,11 @@ footer {
 #masthead .well {
   margin-top:31px;
   min-height:127px;
+}
+
+.navbar {
+  background: #000;
+  font-color: #ccc;
 }
 
 .navbar.affix {
@@ -100,7 +214,64 @@ a,a:hover {
   padding:6px;
   color:#fff;
 }
-    
+
+.lead {
+  font-size: 120%;
+  color: #ccc;
+}
+
+.lead a {
+  padding: 0.2em;
+  margin: 0.2em;
+}
+
+.criar-nova {
+  border-radius: 0.2em;
+  background-color: green;
+  color: #fff;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  font-size: 200%;
+  margin-left: 1.5em;
+  padding-right: 1em;
+}
+
+.criar-nova i {
+  margin-right: 0.5em;
+}
+
+.criar-nova i {
+  margin-right: 0.2em;
+}
+
+.suggestion {
+  border-color: #000;
+  box-sizing: border-box;
+  border-left: 0.2em solid #eee;
+  border-right: 0.2em solid #ddd;
+  border-bottom: 0.3em solid #eee;
+  border-top: 0.2em solid #eee;
+}
+
+.suggestion-description {
+}
+
+.division {
+  margin-bottom: 0.5em;
+  height: 0.5em;
+}
+
+.well.votos-well {
+  border-radius: 0.2em;
+  margin-top: 4em;
+}
+
+.btn-votar {
+  background-color: #222;
+  color: #fff;
+  border-radius: 0.2em;
+}
+
 .btn-twitter {background-color:#4099FF;color:#fff;}
 .btn-facebook {background-color:#3B5998;color:#fff;}
 .btn-google-plus {background-color:#d34836;color:#fff;}
