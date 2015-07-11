@@ -1,0 +1,39 @@
+{{extend 'layout.html'}}
+      <div class="col-md-8">
+
+        <div class="panel">
+          <div class="panel-body">
+          <h1>Sugerir Pauta</h1>
+          {{=form.custom.begin}}
+			<label>Título</label><br>
+			<input class="form-control" name="titulo" type="text" value="" required/>
+			<br>
+			<label>Conteúdo</label><br>
+			<textarea class="text form-control" cols="40" name="conteudo" rows="5" required></textarea>
+			<br>
+			<input name="votos" type="hidden" value="0" />
+			<input name="comentarios" type="hidden" value="0" />
+			<input name="id_usuario" type="hidden" value="{{=auth.user.id}}">
+			<br>
+			<label>Veículo</label><br>
+			<select class="generic-widget form-control" name="veiculo" required>
+				<option value="">Selecione</option>
+				<option value="fm-rio">Nacional FM Brasília</option>
+				<option value="am-rio">Nacional AM Rio</option>
+				<option value="alto-solimoes">Nacional Alto Solimões</option>
+				<option value="am-brasilia">Nacional Brasília AM</option>
+				<option value="amazonia">Nacional Amazônia</option>
+				<option value="mec-fm-rio">MEC FM Rio</option>
+				<option value="mec-am-rio">MEC AM Rio</option>
+				<option value="tv-brasil">TV Brasil</option>
+				<option value="tv-brasil-internacional">TV Brasil Internacional</option>
+			</select>
+			<br>
+			<label>Tags</label><br>
+			<input class="form-control string" id="pauta_tags" name="tags" type="text" value="" />
+			<br>			
+			<input class="btn btn-primary" type="submit" value="Enviar" />
+			{{=form.custom.end}}
+          </div>
+        </div>
+      </div><!--/col-12-->

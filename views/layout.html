@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Pauta Aí!</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="{{=URL('static', 'css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="{{=URL('static', 'css/styles.css')}}" rel="stylesheet">
+  </head>
+  <body>
+    <header class="navbar navbar-default navbar-fixed-top" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <img src="{{=URL('static', 'images/megaphone3.png')}}" class="pull-left logo" height="32" width="32">
+          <a href="{{=URL(c='default', f='index')}}" class="navbar-brand">Pauta Aí!</a>
+      </div>
+      <nav class="collapse navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Como funciona?</a></li>
+          <li><a href="#">Perguntas Frequentes</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    <div class="flash alert alert-dismissable">{{=response.flash or ''}}</div>
+
+  <div class="container pautai-body">
+
+    {{if request.url == URL(c='default', f='index'):}}
+      <div class="filtering">
+
+        <div class="row search">
+          <div class="col-md-8">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Filtrar por...">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><i class="icon-search"></i></button>
+              </span>
+            </div><!-- /input-group -->
+          </div><!-- /.col-lg-6 -->
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-8 categories">
+            <div class="badge">
+            <a href="{{=URL(c='default', f='index', vars={'lista':'mais-novas'})}}">
+              <i class="icon icon-calendar"></i>Mais novas</div>
+            </a>
+            <div class="badge">
+              <a href="{{=URL(c='default', f='index', vars={'lista':'mais-comentadas'})}}">
+                <i class="icon icon-comment"></i>Mais comentadas
+              </a>
+            </div>
+            <div class="badge">
+              <a href="{{=URL(c='default', f='index', vars={'lista':'suas-pautas'})}}">
+                <i class="icon icon-star"></i>Minhas pautas
+              </a>
+            </div>
+          </div>
+
+          <div class="badge criar-nova col-md-3">
+            <a href="{{=URL(c='default', f='sugerir_pauta')}}">
+              <i class="icon icon-plus"></i> Sugerir Pauta
+            </a>
+          </div>
+        </div>
+      </div>
+    {{pass}}
+    <div class="row">
+
+    {{include}}
+
+      <div class="panel panel-primary col-md-4 channels">
+        <div class="panel-body">
+        <div class="label tv-brasil-badge">
+          <a href="{{=URL(c='default', f='index', vars={'lista':'veiculo', 'veiculo':'tv-brasil'})}}">
+            <i class="pull-left icon-facetime-video"> </i>TV Brasil
+          </a>
+        </div>
+        <div class="label tv-brasil-badge">
+          <a href="{{=URL(c='default', f='index', vars={'lista':'veiculo', 'veiculo':'tv-brasil-internacional'})}}">
+            <i class="pull-left icon-facetime-video"> </i>TV Brasil Internacional
+          </a>
+        </div>        
+
+        <div class="label radio-badge">
+          <a href="{{=URL(c='default', f='index', vars={'lista':'veiculo', 'veiculo':'fm-brasilia'})}}">
+            <i class="pull-left icon-microphone"> </i>Nacional FM Brasília
+          </a>
+        </div>
+        <div class="label radio-badge">
+          <a href="{{=URL(c='default', f='index', vars={'lista':'veiculo', 'veiculo':'am-rio'})}}">
+            <i class="pull-left icon-microphone"> </i>Nacional Rio AM
+          </a>
+        </div>
+        <div class="label radio-badge">
+          <a href="{{=URL(c='default', f='index', vars={'lista':'veiculo', 'veiculo':'alto-solimoes'})}}">
+            <i class="pull-left icon-microphone"> </i>Nacional Alto Solimões
+          </a>
+        </div>
+        <div class="label radio-badge">
+          <a href="{{=URL(c='default', f='index', vars={'lista':'veiculo', 'veiculo':'am-brasilia'})}}">
+            <i class="pull-left icon-microphone"> </i>Nacional Brasília AM
+          </a>
+        </div>
+        <div class="label radio-badge">
+          <a href="{{=URL(c='default', f='index', vars={'lista':'veiculo', 'veiculo':'amazonia'})}}">
+            <i class="pull-left icon-microphone"> </i>Nacional Amazônia
+          </a>
+        </div>
+        <div class="label radio-badge">
+          <a href="{{=URL(c='default', f='index', vars={'lista':'veiculo', 'veiculo':'mec-fm-rio'})}}">
+            <i class="pull-left icon-microphone"> </i>MEC FM - Rio
+          </a>
+        </div>
+        <div class="label radio-badge">
+          <a href="{{=URL(c='default', f='index', vars={'lista':'veiculo', 'veiculo':'mc-am-rio'})}}">
+            <i class="pull-left icon-microphone"> </i>MEC AM - Rio
+          </a>
+        </div>
+        
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <ul class="list-inline">
+            <li><i class="icon-facebook icon-2x"></i></li>
+            <li><i class="icon-twitter icon-2x"></i></li>
+            <li><i class="icon-google-plus icon-2x"></i></li>
+            <li><i class="icon-pinterest icon-2x"></i></li>
+          </ul>
+        </div>
+        <div class="col-sm-6">
+          <p class="pull-right">
+            Criado com <i class="icon-heart-empty"></i> 
+            <a href="http://www.bootply.com">Bootply</a>
+          </p>      
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- script references -->
+  <script src="{{=URL('static', 'js/bootstrap.min.js')}}"></script>
+  <script src="{{=URL('static', 'js/jquery.js')}}"></script>
+  <script src="{{=URL('static', 'js/web2py.js')}}"></script>
+
+  <!-- botão facebook -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.4&appId=431224520304698";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- botão twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+</body>
+</html>
