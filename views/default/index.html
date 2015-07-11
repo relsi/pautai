@@ -1,0 +1,90 @@
+{{extend 'layout.html'}}
+      <div class="col-md-8">
+
+        <div class="panel">
+          <div class="panel-body">
+            <!--/sugestões-->
+            {{x = 0}}
+            {{classe = ''}}
+            {{for l in lista:}}
+            {{
+                if x == 5:
+                  x = 1
+                  classe = 'tecnologia'
+                else:
+                    x += 1
+                    if x == 1:
+                        classe = 'tecnologia'
+                    elif x == 2:
+                        classe = 'esportes'
+                    elif x == 3:
+                        classe = 'educacao'
+                    elif x == 4:
+                        classe = 'cultura'
+                    elif x == 5:
+                        classe = 'cidadania'
+                    pass
+                pass
+            }}
+            <div class="row suggestion">
+              <div class="division {{=classe}}"></div>
+              <div class="col-md-2 col-sm-3 text-center">
+                <div class="well votos-well">
+                  <p>
+                    <strong class="votos">{{=l.votos}}</strong>
+                    <span>votos</span>
+                  </p>
+                </div>
+                <p>
+                  <a class="btn btn-lg btn-votar" href="{{=URL(c='default', f='votar', args=l.id)}}">
+                    Votar <i class="icon-arrow-up"></i>
+                  </a>
+                </p>
+              </div>
+              <div class="col-md-10 col-sm-9 suggestion-description pull-right">
+                <h3>{{=l.titulo}}</h3>
+                <div class="row">
+                  <div class="col-xs-9">
+                    <p>
+                      {{=limita_texto(l.conteudo, 250)}}
+                    </p>
+                    <p class="lead">
+                      <a class="btn btn-default" href="{{=URL(c='default', f='ver_pauta', args=l.id)}}">
+                        Ver mais
+                      </a>
+                      <a href="{{=URL(c='default', f='ver_pauta', args=l.id)}}" class="open-comments pull-right">
+                        <i class="icon icon-comment"></i>Comente! ({{=l.comentarios}} comentários)
+                      </a>
+                    </p>
+
+                    <p class="tags">
+                    {{if l.tags:}}
+                      {{tags = l.tags.split(',')}}
+                      {{for tag in tags:}}
+                        <div class="label label-default">
+                          <a href="{{=URL(c='default', f='index', vars={'lista':'tags', 'tag':tag})}}">
+                            {{=tag}}
+                          </a>
+                        </div>
+                      {{pass}}
+                    {{pass}}
+                    </p>
+
+                    <p class="pull-right">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweetar</a>
+                    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"></div>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            {{pass}}
+
+            <!--/sugestões-->
+            <a href="/" class="btn btn-more pull-right btnNext">
+              Carregar Mais
+            </a>
+          </div>
+        </div>
+      </div><!--/col-12-->
